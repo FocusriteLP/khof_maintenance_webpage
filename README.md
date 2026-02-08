@@ -1,1 +1,1 @@
-# khof_maintenance_webpage
+# Maintenance page of Kaerntnerhof Velden
