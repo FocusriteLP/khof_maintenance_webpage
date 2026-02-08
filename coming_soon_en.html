@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="description" content="Hotel Kärntnerhof - A beautiful place to stay in Carinthia.">
+	<meta name="keywords" content="Kärntnerhof, Carinthia, Hotel, Accommodation, Velden, Hotel">
+	<meta name="author" content="HotelKärntnerhof Team">
+	
+    <title>Coming Soon - Kärntnerhof</title>
+    <link rel="icon" href="favicon.svg" />
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        @keyframes pulse-delay {
+            0%, 100% {
+                transform: scale(1);
+                opacity: 0.6;
+            }
+            50% {
+                transform: scale(1.1);
+                opacity: 1;
+            }
+        }
+
+        .dot {
+            animation: pulse-delay 1.5s infinite;
+        }
+
+        .dot:nth-child(2) {
+            animation-delay: 0.3s;
+        }
+
+        .dot:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        .background-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .background-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8));
+            z-index: 0;
+        }
+
+        .contact-icon {
+            display: inline-block;
+            margin-right: 8px;
+            color: #69108e;
+        }
+    </style>
+</head>
+
+<body class="antialiased bg-gray-100 text-gray-900 flex flex-col min-h-screen justify-between">
+    <img src="./img/kaerntnerhof_winter.jpg" alt="Background image of Hotel Kärntnerhof in winter" class="background-image" />
+    <div class="background-overlay"></div>
+
+    <nav id="main-nav" class="fixed top-0 w-full bg-white backdrop-blur-sm shadow-sm border-gray-200 overflow-hidden z-50">
+        <div class="mx-auto max-w-9xl px-4 sm:px-6 lg:px-8 relative">
+            <div class="nav-active-bg hidden sm:block"></div>
+
+            <div class="flex h-20 items-center justify-between">
+                <!-- Left group: logo + nav -->
+                <div class="flex items-center gap-8">
+                    <a href="" class="inline-flex items-center gap-3">
+                        <img src="./img/kärntnerhof_velden_logo.JPG" alt="Kärntnerhof" class="h-16 w-auto rounded-md object-cover shadow-sm" />
+                    </a>
+                </div>
+
+                <!-- Right group: language switcher -->
+                <div class="flex items-center gap-4">
+                    <a href="coming_soon.html" class="px-4 py-2 bg-[#69108e] text-white rounded-md shadow-md hover:bg-[#5a0d7a] transition">DE</a>
+                    <a href="coming_soon_en.html" class="px-4 py-2 bg-[#69108e] text-white rounded-md shadow-md hover:bg-[#5a0d7a] transition">EN</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow flex items-center justify-center mt-20 z-50">
+        <div class="bg-white rounded-lg shadow-lg p-8 text-center max-w-md w-full">
+            <h1 class="text-2xl font-bold mb-4" style="color: #69108e;">Coming Soon</h1>
+            <p class="text-gray-600 mb-6">
+                We are currently working on our new website to offer you an even better experience. Please be patient - we look forward to seeing you!
+            </p>
+
+            <div class="flex items-center justify-center gap-2">
+                <div class="w-4 h-4 bg-[#69108e] rounded-full dot"></div>
+                <div class="w-4 h-4 bg-[#69108e] rounded-full dot"></div>
+                <div class="w-4 h-4 bg-[#69108e] rounded-full dot"></div>
+            </div>
+        
+
+        </div>
+    </main>
+
+    <section class="py-12 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-8 bg-white rounded-lg shadow-md p-6">
+                <h2 class="text-2xl font-bold text-[#569b1e]">Contact Us!</h2>
+                <p class="text-gray-600">We are still available for you.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg hover:scale-105 transform transition duration-300">
+                    <h3 class="text-lg font-semibold mb-2" style="color: #69108e;">E-Mail</h3>
+                    <p class="text-gray-600">office@kaerntnerhof-velden.com</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg hover:scale-105 transform transition duration-300">
+                    <h3 class="text-lg font-semibold mb-2" style="color: #69108e;">Telefon</h3>
+                    <p class="text-gray-600">+43 676 9701077</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg hover:scale-105 transform transition duration-300">
+                    <h3 class="text-lg font-semibold mb-2" style="color: #69108e;">Adresse</h3>
+                    <p class="text-gray-600">Villacher Straße 24, 9220 Velden am Wörthersee, Österreich</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200 shadow-sm z-50">
+    <div class="flex flex-col px-6 py-6 text-sm text-gray-500">
+        
+        <!-- Left: Copyright -->
+        <div id="copyright_notice" class="text-center">
+        &copy; 2026 Khof Hotel GmbH - Hotel Kärntnerhof. All rights reserved.
+        </div>
+        
+    </div>
+    </footer>
+
+</body>
+</html>
