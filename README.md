@@ -12,9 +12,9 @@ Alle Seiten sind statisch (HTML + Tailwind CSS via CDN) und enthalten keine Cook
 Die Seiten werden über **GitHub Pages** bereitgestellt.  
 Die Ordnerstruktur ist so aufgebaut, dass „schöne URLs“ ohne `.html` möglich sind:
 
+Z.B.:
 - `/impressum` → `/impressum/index.html`
 - `/datenschutz` → `/datenschutz/index.html`
-- `/coming-soon` → `/coming-soon/index.html`
 
 ## Nutzung
 
