@@ -11,83 +11,189 @@
 </head>
 <body class="antialiased bg-gray-100 text-gray-900 flex flex-col min-h-screen justify-between">
 
-    <nav id="main-nav" class="fixed top-0 w-full bg-white backdrop-blur-sm shadow-sm border-gray-200 overflow-hidden z-50">
+    <nav id="main-nav" class="fixed top-0 w-full bg-white backdrop-blur-sm shadow-sm border-gray-200 z-50">
         <div class="mx-auto max-w-9xl px-4 sm:px-6 lg:px-8 relative">
-            <div class="nav-active-bg hidden sm:block"></div>
 
             <div class="flex h-20 items-center justify-between">
 
                 <div class="flex items-center gap-8">
                     <a href="/" class="inline-flex items-center gap-3">
-                        <img src="/img/kärntnerhof_velden_logo.JPG" alt="Kärntnerhof" class="h-16 w-auto rounded-md object-cover shadow-sm" />
+                        <img src="/img/kärntnerhof_velden_logo.JPG" class="h-14 w-auto rounded-md shadow-sm" />
+                        &
+                        <img src="/img/Schankbaron_logo.png" class="h-14 w-auto rounded-md shadow-sm" />
                     </a>
+
+                    <div class="hidden sm:flex items-center space-x-4">
+                        <a href="/" class="px-3 py-2 text-base font-medium text-gray-900 hover:text-[#569b1e]">Home</a>
+                        <a href="/de/events/" class="px-3 py-2 text-base font-medium text-gray-900 hover:text-[#569b1e]">Events</a>
+                        <a href="/de/contact/" class="px-3 py-2 text-base font-medium text-gray-900 hover:text-[#569b1e]">Kontakt</a>
+                    </div>
                 </div>
-                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-                    <h1 class="text-3xl font-bold text-[#69108e]">Impressum</h1>
+
+                <div class="flex items-center gap-6">
+
+                    <a href="https://booking.s6.hotellogin.cloud/customer/schankbaron/booking.php?server=s6&hotel=schankbaron"
+                    class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-full font-semibold text-white bg-[#569b1e] shadow-md hover:shadow-lg hover:bg-[#4c8a1a] transition-all duration-300">
+                        <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                        Jetzt Buchen
+                    </a>
+
+                    <div class="hidden sm:flex items-center bg-gray-100 rounded-full p-1 shadow-inner">
+                        <a href="/" class="px-3 py-1.5 text-sm font-medium rounded-full bg-[#69108e] text-white">DE</a>
+                        <a href="/en/" class="px-3 py-1.5 ml-1 text-sm font-medium rounded-full text-gray-700 hover:bg-white">EN</a>
+                    </div>
+
+                    <button id="mobile-menu-button" class="sm:hidden p-2 rounded-md text-gray-600 hover:bg-gray-100">
+                        <svg id="icon-menu" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                        <svg id="icon-close" class="hidden h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M6 18 18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+
                 </div>
             </div>
+
+            <div id="mobile-menu" class="hidden sm:hidden border-t border-gray-100 bg-white px-4 pt-4 pb-6 shadow-md space-y-4">
+
+                <a href="/" class="block rounded-md px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-100">Home</a>
+                <a href="/de/events/" class="block rounded-md px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-100">Events</a>
+                <a href="/de/contact/" class="block rounded-md px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-100">Kontakt</a>
+
+                <a href="https://booking.s6.hotellogin.cloud/customer/schankbaron/booking.php?server=s6&hotel=schankbaron"
+                class="block text-center px-4 py-2 rounded-full font-semibold text-white bg-[#569b1e] shadow hover:bg-[#4c8a1a]">
+                    Jetzt Buchen
+                </a>
+
+                <div class="flex justify-center gap-3 pt-2">
+                    <a href="/" class="px-4 py-2 rounded-full bg-[#69108e] text-white text-sm">DE</a>
+                    <a href="/en/" class="px-4 py-2 rounded-full bg-gray-200 text-gray-700 text-sm">EN</a>
+                </div>
+
+            </div>
+
         </div>
     </nav>
 
     <main class="flex-grow mt-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-8">
-            <section>
-                <p class="text-gray-700 mb-6">Informationspflicht laut §5 E-Commerce Gesetz, §14 Unternehmensgesetzbuch, §63 Gewerbeordnung und Offenlegungspflicht laut §25 Mediengesetz.</p>
-                
-                <div class="bg-white p-6 rounded-lg shadow-sm space-y-2">
-                    <p class="font-semibold">Khof Hotel GmbH</p>
-                    <p>Hotel Kärntnerhof</p>
-                    <p>Villacherstrasse 24</p>
-                    <p>A - 9220 Velden am Wörthersee</p>
-                    <p>Österreich</p>
-                    <p class="pt-2"><strong>Tel:</strong> +43 676 9701077</p>
-                    <p><strong>E-Mail:</strong> <a href="mailto:office@kaerntnerhof-velden.com" class="text-[#69108e] hover:underline">office@kaerntnerhof-velden.com</a></p>
-                </div>
-            </section>
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-12 text-gray-700 leading-relaxed">
 
-            <section>
-                <h2 class="text-xl font-bold text-[#69108e] mb-4">Unternehmensdetails</h2>
-                <p class="text-gray-700"><strong>Unternehmensgegenstand:</strong> Hotellerie</p>
-                <p class="text-gray-700"><strong>UID-Nummer:</strong> ATU82922205</p>
-                <p class="text-gray-700"><strong>Firmenbuchnummer:</strong> 670560v</p>
-                <p class="text-gray-700"><strong>Geschäftsführer:</strong> Heimo Huber</p>
-            </section>
+        <h1 class="text-3xl font-bold text-[#69108e] text-center mb-10">Impressum</h1>
 
-            <section>
-                <h2 class="text-xl font-bold text-[#69108e] mb-4">EU-Streitschlichtung</h2>
-                <p class="text-gray-700">Verbraucher haben die Möglichkeit, Beschwerden an die Online-Streitschlichtungsplattform der EU zu richten: <a href="https://ec.europa.eu/odr/main/index.cfm?event=main.home2.show&Ing=DE" class="text-[#69108e] hover:underline">https://ec.europa.eu/odr/main/index.cfm?event=main.home2.show&Ing=DE</a></p>
-            </section>
+        <section>
+        <p>
+            Informationspflicht laut §5 E-Commerce Gesetz, §14 Unternehmensgesetzbuch, §63 Gewerbeordnung und Offenlegungspflicht laut §25 Mediengesetz.
+        </p>
+        </section>
 
-            <section>
-                <h2 class="text-xl font-bold text-[#69108e] mb-4">Haftung für Inhalte</h2>
-                <p class="text-gray-700">Wir entwickeln die Inhalte dieser Webseite ständig weiter. Leider können wir keine Haftung für die Korrektheit aller Inhalte übernehmen, speziell für Inhalte von Dritten.</p>
-            </section>
+        <section class="bg-white p-6 rounded-lg shadow-sm space-y-2">
+        <p class="font-semibold text-gray-900">Khof Hotel GmbH</p>
+        <p>Hotel Kärntnerhof</p>
+        <p>Villacherstraße 24</p>
+        <p>A‑9220 Velden am Wörthersee</p>
+        <p>Österreich</p>
 
-            <section>
-                <h2 class="text-xl font-bold text-[#69108e] mb-4">Haftung für Links</h2>
-                <p class="text-gray-700">Unsere Webseite enthält Links zu anderen Webseiten, für deren Inhalte wir nicht verantwortlich sind.</p>
-            </section>
+        <p class="pt-2"><strong>Tel:</strong> +43 676 9701077</p>
+        <p><strong>E‑Mail:</strong> 
+            <a href="mailto:office@kaerntnerhof-velden.com" class="text-[#69108e] hover:underline">
+            office@kaerntnerhof-velden.com
+            </a>
+        </p>
+        </section>
 
-            <section>
-                <h2 class="text-xl font-bold text-[#69108e] mb-4">Urheberrecht</h2>
-                <p class="text-gray-700">Alle Inhalte dieser Webseite unterliegen dem Urheberrecht und dürfen nicht ohne Genehmigung verwendet werden.</p>
-            </section>
-        </div>
+        <section>
+        <h2 class="text-xl font-bold text-[#69108e] mb-4">Unternehmensdetails</h2>
+
+        <p><strong>Unternehmensgegenstand:</strong> Hotellerie</p>
+        <p><strong>UID‑Nummer:</strong> ATU82922205</p>
+        <p><strong>Firmenbuchnummer:</strong> 670560v</p>
+        <p><strong>Firmenbuchgericht:</strong> Landesgericht Klagenfurt</p>
+        <p><strong>Firmensitz:</strong> A‑9220 Velden am Wörthersee, Kärnten, Österreich</p>
+        <p><strong>Geschäftsführer:</strong> Heimo Huber</p>
+        </section>
+
+        <section>
+        <h2 class="text-xl font-bold text-[#69108e] mb-4">Rechtliche Informationen</h2>
+
+        <p><strong>Aufsichtsbehörde / Gewerbebehörde:</strong> Bezirkshauptmannschaft Villach</p>
+        <p><strong>Kammerzugehörigkeit:</strong> Wirtschaftskammer Österreich (WKÖ), Fachgruppe Hotellerie</p>
+        <p><strong>Berufsrecht:</strong> Gewerbeordnung – abrufbar unter www.ris.bka.gv.at</p>
+
+        <p class="pt-2"><strong>Medieninhaber:</strong> Khof Hotel GmbH</p>
+        <p><strong>Grundlegende Richtung:</strong> Präsentation des Hotels und seiner Dienstleistungen</p>
+        </section>
+
+        <section>
+        <h2 class="text-xl font-bold text-[#69108e] mb-4">Haftung für Inhalte</h2>
+
+        <p>
+            Wir entwickeln die Inhalte dieser Webseite ständig weiter und bemühen uns, korrekte und aktuelle Informationen bereitzustellen. 
+            Leider können wir keine Haftung für die Korrektheit aller Inhalte übernehmen, insbesondere für Inhalte, die von Dritten bereitgestellt wurden.
+        </p>
+
+        <p>
+            Sollten Ihnen problematische oder rechtswidrige Inhalte auffallen, kontaktieren Sie uns bitte umgehend. 
+            Die Kontaktdaten finden Sie oben im Impressum.
+        </p>
+        </section>
+
+        <section>
+        <h2 class="text-xl font-bold text-[#69108e] mb-4">Haftung für Links</h2>
+
+        <p>
+            Unsere Webseite enthält Links zu externen Webseiten, für deren Inhalte wir nicht verantwortlich sind. 
+            Wenn Ihnen rechtswidrige Links auffallen, kontaktieren Sie uns bitte – die Kontaktdaten finden Sie im Impressum.
+        </p>
+        </section>
+
+        <section>
+        <h2 class="text-xl font-bold text-[#69108e] mb-4">Urheberrecht</h2>
+
+        <p>
+            Alle Inhalte dieser Webseite (Bilder, Fotos, Texte, Videos) unterliegen dem Urheberrecht. 
+            Eine unerlaubte Nutzung wird gegebenenfalls rechtlich verfolgt.
+        </p>
+        </section>
+
+        <section>
+        <h2 class="text-xl font-bold text-[#69108e] mb-4">Bildnachweis</h2>
+
+        <p>
+            Die Bilder, Fotos und Grafiken auf dieser Webseite sind urheberrechtlich geschützt. 
+            Die Bildrechte liegen bei:
+        </p>
+
+        <p class="font-semibold text-gray-900">
+            Khof Hotel GmbH<br>
+            Hotel Kärntnerhof
+        </p>
+        </section>
+
+    </div>
     </main>
 
-    <footer class="bg-white border-t border-gray-200 shadow-sm z-50">
-    <div class="flex flex-col md:flex-row items-center md:justify-between px-6 py-6 text-sm text-gray-500 gap-4">
-        
-        <div id="copyright_notice" class="text-center md:text-left">
-        &copy; 2026 Khof Hotel GmbH Hotel Kärntnerhof. All rights reserved.
+
+    <footer class="bg-white border-t border-gray-200 shadow-sm z-20">
+        <div class="flex flex-col md:flex-row items-center md:justify-between px-6 py-6 text-sm text-gray-600 gap-4">
+
+            <div id="copyright_notice" class="text-center md:text-left">
+                &copy; 2026 Khof Hotel GmbH. All rights reserved.
+            </div>
+
+            <div class="flex items-center divide-x divide-gray-300">
+                <a href="/de/contact/" class="px-3 hover:text-[#69108e] transition">Kontakt</a> 
+                <a href="/legal_notice/" class="px-3 hover:text-[#69108e] transition">Impressum</a> 
+                <a href="/privacy/" class="px-3 hover:text-[#69108e] transition">DSGVO</a>
+            </div>
+
         </div>
-        
-        <div class="flex space-x-6">
-        <a href="/legal_notice/" class="hover:text-[#69108e]">Impressum</a>
-        <a href="/privacy/" class="hover:text-[#69108e]">DSGVO</a>
-        </div>
-        
-    </div>
-    </footer>   
+    </footer>
+
 </body>
 </html>
